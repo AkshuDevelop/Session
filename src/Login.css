@@ -1,0 +1,157 @@
+html{
+    width: 100%;
+height: 100%;
+  background:
+    radial-gradient(
+        circle at 70% 40%,
+        rgba(36, 122, 71, 0.35) 0%,
+        rgba(15, 48, 28, 0.1) 40%,
+        rgba(10, 30, 18, 0.05) 70%,
+        rgba(8, 22, 14, 0) 100%
+    ),
+    linear-gradient(
+        to right,
+        #0F2A1A 0%,
+        #204F2E 50%,
+        #194527 100%
+    );
+background-blend-mode: normal;
+}
+#LoginContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+#icon{
+    width:5rem;
+    height:5rem;
+  filter: drop-shadow(0 0 14px rgba(0, 0, 0, 0.35))
+}
+
+#title{
+color: #FFF;
+font-family: "Instrument Serif";
+font-size: 42px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+letter-spacing: 1.92px;
+
+}
+#SubText{
+    color: #E0D5D5;
+text-align: center;
+font-family: Halant;
+font-size: 20px;
+font-style: normal;
+font-weight: 300;
+line-height: normal;
+}
+
+#GoogBtn{
+    width: 471px;
+height: 56px;
+border-radius: 16px;
+background: #19E65E;
+box-shadow: 0 4px 4px 13px rgba(42, 108, 64, 0.04);
+margin-top: 2.4rem;  
+display: flex;
+  align-items: center; 
+justify-content: center;
+gap:10px;  
+}
+
+#GBtnText{
+    color: #000;
+text-align: center;
+font-family: Inter;
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;  
+
+}
+#gicon{
+    width: 19px;
+height: 19px;
+margin-right: 0.6rem;
+}
+
+#or{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2.4rem;
+    color: rgba(175, 168, 168, 0.60);
+text-align: center;
+font-family: Inter;
+font-size: 15px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+#LoginFormEmail{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem;
+    margin-top: 2.4rem;
+}
+#email{
+width: 471px;
+height: 56px;
+border-radius: 16px;
+border: 1px solid rgba(255, 255, 255, 0.25);
+background: rgba(29, 44, 34, 0.58);
+backdrop-filter: blur(0px);
+
+}
+#email::placeholder{
+    color: rgba(255, 255, 255, 0.20);
+text-align: center;
+font-family: Inter;
+font-size: 20px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+
+}
+#LoginBtn{
+   width: 478px;
+height: 56px;
+border-radius: 16px;
+border: 1px solid rgba(255, 255, 255, 0.25);
+background: rgba(29, 44, 34, 0.58);
+backdrop-filter: blur(0px);
+color: #FFF;
+text-align: center;
+font-family: Inter;
+font-size: 20px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+#signup{
+    color: rgba(175, 168, 168, 0.60);
+text-align: center;
+font-family: Inter;
+font-size: 15px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+margin-top: 0.9rem;
+}
+#signupLink{
+    color: #19E65E;
+}
+.line{
+    width: 125px;
+    height: 2px;
+   
+}

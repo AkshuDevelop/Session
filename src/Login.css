@@ -87,7 +87,7 @@ margin-right: 0.6rem;
     justify-content: center;
     gap: 1rem;
     margin-top: 2.4rem;
-    color: rgba(175, 168, 168, 0.60);
+    color: rgba(175, 168, 168, 0.90);
 text-align: center;
 font-family: Inter;
 font-size: 15px;
@@ -137,6 +137,18 @@ font-style: normal;
 font-weight: 500;
 line-height: normal;
 }
+#LoginBtn:hover{
+    background: rgba(29, 44, 34, 0.80);
+    transition-duration: 1s;
+    transition: cubic-bezier(0.165, 0.84, 0.44, 1);
+    
+}
+#LoginBtn:active{
+    background: #12351E;
+    transition-duration: 0.4s;
+    transition: cubic-bezier(0.165, 0.84, 0.44, 1);
+    
+}
 #signup{
     color: rgba(175, 168, 168, 0.60);
 text-align: center;
@@ -149,6 +161,11 @@ margin-top: 0.9rem;
 }
 #signupLink{
     color: #19E65E;
+}
+#signupLink:hover{
+    color:#ffffff;
+    transition-duration: 0.1s;
+    transition: ease-in-out;
 }
 .line{
     width: 125px;

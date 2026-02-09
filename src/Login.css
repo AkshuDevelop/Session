@@ -106,15 +106,15 @@ html {
 }
 #email::placeholder {
     color: rgba(255, 255, 255, 0.2);
-    text-align: center;
     font-family: Inter;
     font-size: 20px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
+    text-align: center;
 }
 #LoginBtn {
-    width: 478px;
+    width: 471px;
     height: 56px;
     border-radius: 16px;
     border: 1px solid rgba(255, 255, 255, 0.25);
@@ -207,18 +207,19 @@ html {
     width: 375px;
     height: 56px;
     border-radius: 16px;
-    border: 1px solid rgba(213, 213, 213, 0.1);
+    border: 3px solid rgba(213, 213, 213, 0.1);
     background: rgba(29, 44, 34, 0.58);
     backdrop-filter: blur(0px);
-    text-align: center;
     color: rgba(255, 255, 255, 0.2);
-    text-align: center;
+    box-sizing: border-box;
+    padding-left: 1.5rem;
     font-family: Inter;
     font-size: 20px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
 }
+
 #SignUpForm {
     display: flex;
     flex-direction: row;

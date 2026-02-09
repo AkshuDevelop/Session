@@ -1,16 +1,69 @@
-# React + Vite
+# 📘 Session — A Modern Productivity & Task Management App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Session** is a learning-focused project where I’m building a clean, modern productivity tool designed to improve my skills in **React.js**, UI/UX, and (later) full-stack development using **Node.js + Express**.
 
-Currently, two official plugins are available:
+The aim is to create a Notion-inspired task manager where users can create pages, add to-dos, track progress, and view everything through a clean and intuitive interface.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Currently, I’m working on the **base UI and component structure**. Routing, backend APIs, and database integration will be added gradually.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🚀 Features (Planned + In Progress)
 
-## Expanding the ESLint configuration
+- **📄 Page-Based Organization**  
+  Create multiple pages and add tasks inside each.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **🔍 Global Search**  
+  Search across all tasks and pages (planned).
+
+- **🗓️ Today’s Task View**  
+  View all tasks scheduled for the current day.
+
+- **📊 Kanban Board**  
+  Move tasks between Pending → In Progress → Completed.
+
+- **📅 Calendar View**  
+  Display tasks in a calendar layout for long-term planning.
+
+- **✨ Clean & Modern UI**  
+  UI-first development approach to ensure a polished experience.
+
+---
+
+## 🛠️ Tech Stack
+
+### **Frontend**
+- React.js  
+- CSS  
+- React Hooks  
+- (Upcoming) React Router
+
+### **Backend (Coming Soon)**
+- Node.js  
+- Express  
+- MongoDB + Mongoose  
+- JWT Authentication  
+- REST API structure
+
+---
+
+## 📦 Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/AkshuDevelop/Session.git
+```
+Navigate into the folder:
+```
+cd Session
+```
+Install dependencies:
+```
+npm install
+```
+
+Run the development server:
+```
+npm run dev
+```

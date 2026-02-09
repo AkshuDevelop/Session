@@ -50,8 +50,10 @@ function Login() {
       ) : (
         <>
           <form id="SignUpForm">
-            <input type="email" placeholder="name@example.com" id="email" />
-            <button id="LoginBtn">Sign in with Email</button>
+            <input type="email" placeholder="name@example.com" id="emailSign" />
+            <button id="SignInBtn">
+              <img src="/src/assets/enter.svg" className="Enter" />
+            </button>
           </form>
           <div id="signIn">
             Already have an account?{" "}

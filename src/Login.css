@@ -181,19 +181,12 @@ html {
 }
 
 #SignInBtn {
-    width: 478px;
+    width: 82px;
     height: 56px;
-    border-radius: 16px;
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    background: rgba(29, 44, 34, 0.58);
+    border-radius: 42px;
+    border: 1px solid rgba(213, 213, 213, 0.1);
+    background: #19e65e;
     backdrop-filter: blur(0px);
-    color: #fff;
-    text-align: center;
-    font-family: Inter;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
 }
 #SignInBtn:hover {
     background: rgba(29, 44, 34, 0.8);
@@ -204,4 +197,32 @@ html {
     background: #12351e;
     transition-duration: 0.4s;
     transition: cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+#Enter {
+    width: 19.167px;
+    height: 27.5px;
+    transform: rotate(90deg);
+}
+#emailSign {
+    width: 375px;
+    height: 56px;
+    border-radius: 16px;
+    border: 1px solid rgba(213, 213, 213, 0.1);
+    background: rgba(29, 44, 34, 0.58);
+    backdrop-filter: blur(0px);
+    text-align: center;
+    color: rgba(255, 255, 255, 0.2);
+    text-align: center;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+#SignUpForm {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.8rem;
+    margin-top: 2rem;
 }

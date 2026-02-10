@@ -12,7 +12,7 @@ html {
         linear-gradient(to right, #0f2a1a 0%, #204f2e 50%, #194527 100%);
     background-blend-mode: normal;
 }
-#LoginContainer {
+#Log_C {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -20,13 +20,13 @@ html {
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
 }
-#icon {
+#IcoImg {
     width: 5rem;
     height: 5rem;
     filter: drop-shadow(0 0 14px rgba(0, 0, 0, 0.35));
 }
 
-#title {
+#Welcome_T {
     color: #fff;
     font-family: "Instrument Serif";
     font-size: 42px;
@@ -35,7 +35,7 @@ html {
     line-height: normal;
     letter-spacing: 1.92px;
 }
-#SubText {
+#Sub_T {
     color: #e0d5d5;
     text-align: center;
     font-family: Halant;
@@ -45,7 +45,7 @@ html {
     line-height: normal;
 }
 
-#GoogBtn {
+#Google_Btn_Auth {
     width: 471px;
     height: 56px;
     border-radius: 16px;
@@ -58,7 +58,7 @@ html {
     gap: 10px;
 }
 
-#GBtnText {
+#Google_Btn_Auth_Content {
     color: #000;
     text-align: center;
     font-family: Inter;
@@ -67,13 +67,13 @@ html {
     font-weight: 700;
     line-height: normal;
 }
-#gicon {
+#Google_Btn_Auth_Content_Ico {
     width: 19px;
     height: 19px;
     margin-right: 0.6rem;
 }
 
-#or {
+#Auth_MethodSeparation {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -88,15 +88,19 @@ html {
     font-weight: 400;
     line-height: normal;
 }
+.Google_Btn_Auth_Content_Lines {
+    width: 125px;
+    height: 2px;
+}
 
-#LoginFormEmail {
+#Log_Email_Auth_Form {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 0.3rem;
     margin-top: 2.4rem;
 }
-#email {
+#Auth_Email {
     width: 471px;
     height: 56px;
     border-radius: 16px;
@@ -104,7 +108,7 @@ html {
     background: rgba(29, 44, 34, 0.58);
     backdrop-filter: blur(0px);
 }
-#email::placeholder {
+#Auth_Email::placeholder {
     color: rgba(255, 255, 255, 0.2);
     font-family: Inter;
     font-size: 20px;
@@ -113,7 +117,7 @@ html {
     line-height: normal;
     text-align: center;
 }
-#LoginBtn {
+#SignInWithEmail_Button_Auth {
     width: 471px;
     height: 56px;
     border-radius: 16px;
@@ -156,12 +160,8 @@ html {
     transition-duration: 0.1s;
     transition: ease-in-out;
 }
-.line {
-    width: 125px;
-    height: 2px;
-}
 
-#signIn {
+#Already_Have_An_Account_Popup {
     color: rgba(175, 168, 168, 0.6);
     text-align: center;
     font-family: Inter;
@@ -169,18 +169,19 @@ html {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    margin-top: 0.9rem;
+    margin-top: 1.7rem;
 }
-#signInLink {
+#Already_Have_An_Account_Popup_Link_Redirect {
     color: #19e65e;
+    padding-left: 10px;
 }
-#signupLink:hover {
+#Already_Have_An_Account_Popup_Link_Redirect:hover {
     color: #ffffff;
     transition-duration: 0.1s;
     transition: ease-in-out;
 }
 
-#SignInBtn {
+#Auth_SignIn_Btn {
     width: 82px;
     height: 56px;
     border-radius: 42px;
@@ -188,23 +189,23 @@ html {
     background: #19e65e;
     backdrop-filter: blur(0px);
 }
-#SignInBtn:hover {
+#Auth_SignIn_Btn:hover {
     background: rgba(29, 44, 34, 0.8);
     transition-duration: 1s;
     transition: cubic-bezier(0.165, 0.84, 0.44, 1);
 }
-#SignInBtn:active {
+#Auth_SignIn_Btn:active {
     background: #12351e;
     transition-duration: 0.4s;
     transition: cubic-bezier(0.165, 0.84, 0.44, 1);
 }
-#Enter {
+#Enter_Arrow_Svg {
     width: 19.167px;
     height: 27.5px;
     transform: rotate(90deg);
 }
-#emailSign {
-    width: 375px;
+#Auth_Email_Account_Creation {
+    width: 400px;
     height: 56px;
     border-radius: 16px;
     border: 3px solid rgba(213, 213, 213, 0.1);
@@ -220,7 +221,7 @@ html {
     line-height: normal;
 }
 
-#SignUpForm {
+#Sign_Email_Auth_Form {
     display: flex;
     flex-direction: row;
     align-items: center;

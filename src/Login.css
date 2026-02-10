@@ -204,7 +204,7 @@ html {
     height: 27.5px;
     transform: rotate(90deg);
 }
-#Auth_Email_Account_Creation {
+.Auth_Email_Account_Creation {
     width: 400px;
     height: 56px;
     border-radius: 16px;

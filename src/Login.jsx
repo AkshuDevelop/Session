@@ -2,8 +2,23 @@ import React from "react";
 import "./Login.css";
 function Login() {
   const [Status, setStatus] = React.useState(false);
-  console.log(Status);
+  const [LoginStage, SetLoginStage] = React.useState(0);
 
+  const loginInputId =
+    LoginStage === 1
+      ? "LoginStage_Email_Auth_0"
+      : LoginStage === 2
+        ? "LoginStage_Email_Auth_1"
+        : "LoginStage_Email_Auth_2";
+
+  const PlaceholderId =
+    LoginStage === 0
+      ? "name@example.com"
+      : LoginStage === 1
+        ? "OTP"
+        : "Password";
+
+  console.log(LoginStage);
   return (
     <div id="Log_C">
       <img src="/src/assets/icon.svg" alt="Session" id="IcoImg" />
@@ -63,10 +78,13 @@ function Login() {
           <form id="Sign_Email_Auth_Form">
             <input
               type="email"
-              placeholder="name@example.com"
-              id="Auth_Email_Account_Creation"
+              placeholder={PlaceholderId}
+              className="Auth_Email_Account_Creation"
             />
-            <button id="Auth_SignIn_Btn">
+            <button
+              id="Auth_SignIn_Btn"
+              onClick={() => SetLoginStage((s) => (s >= 2 ? s : s + 1))}
+            >
               <img src="/src/assets/enter.svg" className="Enter_Arrow_Svg" />
             </button>
           </form>
@@ -75,7 +93,10 @@ function Login() {
             <a
               href="#"
               id="Already_Have_An_Account_Popup_Link_Redirect"
-              onClick={() => setStatus(false)}
+              onClick={function SettingUpdates() {
+                setStatus(false);
+                SetLoginStage(0);
+              }}
             >
               Sign In
             </a>

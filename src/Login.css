@@ -132,17 +132,15 @@ html {
     font-weight: 500;
     line-height: normal;
 }
-#LoginBtn:hover {
+#SignInWithEmail_Button_Auth:hover {
     background: rgba(29, 44, 34, 0.8);
-    transition-duration: 1s;
-    transition: cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: background 1s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
-#LoginBtn:active {
+#SignInWithEmail_Button_Auth:active {
     background: #12351e;
-    transition-duration: 0.4s;
-    transition: cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: background 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
-#signup {
+#Dont_have_an_account_Component {
     color: rgba(175, 168, 168, 0.6);
     text-align: center;
     font-family: Inter;
@@ -150,15 +148,15 @@ html {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    margin-top: 0.9rem;
+    margin-top: 1.7rem;
 }
-#signupLink {
+#Dont_have_an_account_Component_SignupLink {
     color: #19e65e;
+    padding-left: 10px;
 }
-#signupLink:hover {
+#Dont_have_an_account_Component_SignupLink:hover {
     color: #ffffff;
-    transition-duration: 0.1s;
-    transition: ease-in-out;
+    transition: color 0.2s ease-in-out;
 }
 
 #Already_Have_An_Account_Popup {
@@ -177,8 +175,7 @@ html {
 }
 #Already_Have_An_Account_Popup_Link_Redirect:hover {
     color: #ffffff;
-    transition-duration: 0.1s;
-    transition: ease-in-out;
+    transition: color 0.2s ease-in-out;
 }
 
 #Auth_SignIn_Btn {
@@ -191,13 +188,11 @@ html {
 }
 #Auth_SignIn_Btn:hover {
     background: rgba(29, 44, 34, 0.8);
-    transition-duration: 1s;
-    transition: cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: background 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 #Auth_SignIn_Btn:active {
-    background: #12351e;
-    transition-duration: 0.4s;
-    transition: cubic-bezier(0.165, 0.84, 0.44, 1);
+    background: #98eb9e;
+    transition: background 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 #Enter_Arrow_Svg {
     width: 19.167px;

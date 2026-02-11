@@ -66,9 +66,13 @@ function Login() {
             />
             <button id="SignInWithEmail_Button_Auth">Sign in with Email</button>
           </form>
-          <div id="signup">
-            Don't have an account?{" "}
-            <a href="#" id="signupLink" onClick={() => setStatus(true)}>
+          <div id="Dont_have_an_account_Component">
+            Don't have an account?
+            <a
+              href="#"
+              id="Dont_have_an_account_Component_SignupLink"
+              onClick={() => setStatus(true)}
+            >
               Sign Up
             </a>
           </div>

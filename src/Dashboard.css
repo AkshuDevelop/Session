@@ -1,0 +1,16 @@
+html {
+    width: 100%;
+    height: 100%;
+    background:
+        radial-gradient(
+            circle at 70% 40%,
+            rgba(36, 122, 71, 0.35) 0%,
+            rgba(15, 48, 28, 0.1) 40%,
+            rgba(10, 30, 18, 0.05) 70%,
+            rgba(8, 22, 14, 0) 100%
+        ),
+        linear-gradient(to right, #0f2a1a 0%, #204f2e 50%, #194527 100%);
+    background-blend-mode: normal;
+
+.DashBoard_Container {
+}

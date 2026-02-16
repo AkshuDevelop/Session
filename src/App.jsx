@@ -5,7 +5,7 @@ import Dashboard from "./Dashboard";
 function App() {
   return (
     <div>
-      <Dashboard />
+      <Dashboard Workspace_Name="PixelDrive" />
       {/* <Login />*/}
     </div>
   );

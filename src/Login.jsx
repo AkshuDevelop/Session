@@ -1,5 +1,6 @@
 import React from "react";
 import "./Login.css";
+import Dashboard from "./Dashboard";
 function Login() {
   const [Status, setStatus] = React.useState(false);
   const [LoginStage, SetLoginStage] = React.useState(0);
@@ -17,6 +18,9 @@ function Login() {
       : LoginStage === 1
         ? "OTP"
         : "Password";
+
+  if (LoginStage == 3) {
+  }
 
   console.log(LoginStage);
   return (
@@ -64,7 +68,9 @@ function Login() {
               placeholder="name@example.com"
               id="Auth_Email"
             />
-            <button id="SignInWithEmail_Button_Auth">Sign in with Email</button>
+            <button id="SignInWithEmail_Button_Auth" type="submit">
+              Sign in with Email
+            </button>
           </form>
           <div id="Dont_have_an_account_Component">
             Don't have an account?
@@ -87,7 +93,8 @@ function Login() {
             />
             <button
               id="Auth_SignIn_Btn"
-              onClick={() => SetLoginStage((s) => (s >= 2 ? s : s + 1))}
+              type="submit"
+              onClick={() => SetLoginStage((s) => (s >= 3 ? s : s + 1))}
             >
               <img src="/src/assets/enter.svg" className="Enter_Arrow_Svg" />
             </button>

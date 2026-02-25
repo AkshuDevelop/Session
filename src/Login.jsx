@@ -19,6 +19,9 @@ function Login() {
         ? "OTP"
         : "Password";
 
+  const TypeholderId =
+    LoginStage === 0 ? "email" : LoginStage === 1 ? "number" : "Password";
+
   if (LoginStage == 3) {
   }
 
@@ -87,7 +90,7 @@ function Login() {
         <>
           <form id="Sign_Email_Auth_Form">
             <input
-              type="email"
+              type={TypeholderId}
               placeholder={PlaceholderId}
               className="Auth_Email_Account_Creation"
             />

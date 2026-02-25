@@ -93,6 +93,7 @@ function Login() {
               type={TypeholderId}
               placeholder={PlaceholderId}
               className="Auth_Email_Account_Creation"
+              onChange={(e) => setInputValue(e.target.value)}
             />
             <button
               id="Auth_SignIn_Btn"

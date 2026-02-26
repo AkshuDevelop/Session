@@ -8,6 +8,7 @@ function App() {
     <div>
       {/* <Dashboard Workspace_Name="PixelDrive" />*/}
       <Login />
+      {/* <Pages template="doc_template" page_name="Resume Building Exercise" />*/}
     </div>
   );
 }

@@ -1,4 +1,4 @@
-html {
+/*html {
     width: 100%;
     height: 100%;
     background:
@@ -11,7 +11,7 @@ html {
         ),
         linear-gradient(to right, #0f2a1a 0%, #204f2e 50%, #194527 100%);
     background-blend-mode: normal;
-}
+}*/
 #Log_C {
     display: flex;
     flex-direction: column;

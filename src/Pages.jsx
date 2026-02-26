@@ -11,3 +11,4 @@ export default function Pages(props) {
       </article>
     </div>
   );
+}

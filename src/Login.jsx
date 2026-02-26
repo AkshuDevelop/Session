@@ -22,9 +22,6 @@ function Login() {
   const TypeholderId =
     LoginStage === 0 ? "email" : LoginStage === 1 ? "number" : "Password";
 
-  if (LoginStage == 3) {
-  }
-
   console.log(LoginStage);
   return (
     <div id="Log_C">

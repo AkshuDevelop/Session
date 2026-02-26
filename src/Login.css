@@ -1,3 +1,4 @@
+/*Use this commented css only if u want a close one css background*/
 /*html {
     width: 100%;
     height: 100%;
@@ -12,7 +13,7 @@
         linear-gradient(to right, #0f2a1a 0%, #204f2e 50%, #194527 100%);
     background-blend-mode: normal;
 }*/
-body {
+html {
     background: url("src/assets/Background.png");
     background-size: cover;
     background-repeat: no-repeat;

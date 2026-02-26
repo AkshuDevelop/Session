@@ -1,16 +1,14 @@
 import React from "react";
 import "./Login.css";
 import Dashboard from "./Dashboard";
+
 function Login() {
   const [Status, setStatus] = React.useState(false);
   const [LoginStage, SetLoginStage] = React.useState(0);
 
-  const loginInputId =
-    LoginStage === 1
-      ? "LoginStage_Email_Auth_0"
-      : LoginStage === 2
-        ? "LoginStage_Email_Auth_1"
-        : "LoginStage_Email_Auth_2";
+  // input state and error state
+  const [inputValue, setInputValue] = React.useState("");
+  const [emailError, setEmailError] = React.useState("");
 
   const PlaceholderId =
     LoginStage === 0
@@ -19,8 +17,46 @@ function Login() {
         ? "OTP"
         : "Password";
 
+  // Fixed email validation regex (removed stray dot and uses the common RFC-ish regex)
+  const validateEmail = (email) => {
+    return String(email)
+      .toLowerCase()
+      .match(
+        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+      );
+  };
+
   const TypeholderId =
-    LoginStage === 0 ? "email" : LoginStage === 1 ? "number" : "Password";
+    LoginStage === 0 ? "email" : LoginStage === 1 ? "number" : "password";
+
+  // Handler for sign-in-with-email form
+  const handleEmailSignIn = (e) => {
+    e.preventDefault();
+    setEmailError("");
+    if (validateEmail(inputValue)) {
+      // proceed to next stage (e.g. OTP)
+      SetLoginStage((s) => (s >= 3 ? s : s + 1));
+    } else {
+      setEmailError("Please enter a valid email address.");
+    }
+  };
+
+  // Generic submit for the sign-up form (uses LoginStage and inputValue)
+  const handleSignUpSubmit = (e) => {
+    e.preventDefault();
+    setEmailError("");
+    if (LoginStage === 0) {
+      // email stage -> validate email then go to next
+      if (validateEmail(inputValue)) {
+        SetLoginStage(1);
+      } else {
+        setEmailError("Please enter a valid email address.");
+      }
+    } else {
+      // other stages (OTP / password) - advance stage for now
+      SetLoginStage((s) => (s >= 3 ? s : s + 1));
+    }
+  };
 
   console.log(LoginStage);
   return (
@@ -41,6 +77,7 @@ function Login() {
               <img
                 src="/src/assets/google.svg"
                 id="Google_Btn_Auth_Content_Ico"
+                alt="google"
               />
               Continue with Google
             </div>
@@ -49,11 +86,13 @@ function Login() {
             <img
               src="/src/assets/lines.svg"
               className="Google_Btn_Auth_Content_Lines"
+              alt="lines"
             />
             OR CONTINUE WITH EMAIL
             <img
               src="/src/assets/lines.svg"
               className="Google_Btn_Auth_Content_Lines"
+              alt="lines"
             />
           </div>{" "}
         </>
@@ -62,22 +101,34 @@ function Login() {
       )}
       {!Status ? (
         <>
-          <form id="Log_Email_Auth_Form">
+          <form id="Log_Email_Auth_Form" onSubmit={handleEmailSignIn}>
             <input
               type="email"
               placeholder="name@example.com"
               id="Auth_Email"
+              value={inputValue}
+              onChange={(e) => setInputValue(e.target.value)}
             />
             <button id="SignInWithEmail_Button_Auth" type="submit">
               Sign in with Email
             </button>
           </form>
+          {emailError && (
+            <div id="Email_Error" style={{ color: "crimson", marginTop: 8 }}>
+              {emailError}
+            </div>
+          )}
           <div id="Dont_have_an_account_Component">
             Don't have an account?
             <a
               href="#"
               id="Dont_have_an_account_Component_SignupLink"
-              onClick={() => setStatus(true)}
+              onClick={() => {
+                setStatus(true);
+                setInputValue("");
+                setEmailError("");
+                SetLoginStage(0);
+              }}
             >
               Sign Up
             </a>
@@ -85,21 +136,27 @@ function Login() {
         </>
       ) : (
         <>
-          <form id="Sign_Email_Auth_Form">
+          <form id="Sign_Email_Auth_Form" onSubmit={handleSignUpSubmit}>
             <input
               type={TypeholderId}
               placeholder={PlaceholderId}
               className="Auth_Email_Account_Creation"
+              value={inputValue}
               onChange={(e) => setInputValue(e.target.value)}
             />
-            <button
-              id="Auth_SignIn_Btn"
-              type="submit"
-              onClick={() => SetLoginStage((s) => (s >= 3 ? s : s + 1))}
-            >
-              <img src="/src/assets/enter.svg" className="Enter_Arrow_Svg" />
+            <button id="Auth_SignIn_Btn" type="submit">
+              <img
+                src="/src/assets/enter.svg"
+                className="Enter_Arrow_Svg"
+                alt="enter"
+              />
             </button>
           </form>
+          {emailError && (
+            <div id="Email_Error" style={{ color: "crimson", marginTop: 8 }}>
+              {emailError}
+            </div>
+          )}
           <div id="Already_Have_An_Account_Popup">
             Already have an account?
             <a
@@ -108,6 +165,8 @@ function Login() {
               onClick={function SettingUpdates() {
                 setStatus(false);
                 SetLoginStage(0);
+                setInputValue("");
+                setEmailError("");
               }}
             >
               Sign In

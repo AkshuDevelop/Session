@@ -10,6 +10,14 @@ function Login() {
   const [inputValue, setInputValue] = React.useState("");
   const [emailError, setEmailError] = React.useState("");
 
+  // This is for future form data extraction
+  const loginInputId =
+    LoginStage === 1
+      ? "LoginStage_Email_Auth_0"
+      : LoginStage === 2
+        ? "LoginStage_Email_Auth_1"
+        : "LoginStage_Email_Auth_2";
+
   const PlaceholderId =
     LoginStage === 0
       ? "name@example.com"
@@ -40,6 +48,19 @@ function Login() {
       setEmailError("Please enter a valid email address.");
     }
   };
+
+  // ref to the input so we can focus it after clearing
+  const inputRef = React.useRef(null);
+
+  // Clear the input value (and error) every time LoginStage changes.
+  // Also focus the input if it exists.
+  React.useEffect(() => {
+    setInputValue("");
+    setEmailError("");
+    if (inputRef.current && typeof inputRef.current.focus === "function") {
+      inputRef.current.focus();
+    }
+  }, [LoginStage]);
 
   // Generic submit for the sign-up form (uses LoginStage and inputValue)
   const handleSignUpSubmit = (e) => {
@@ -139,8 +160,10 @@ function Login() {
           <form id="Sign_Email_Auth_Form" onSubmit={handleSignUpSubmit}>
             <input
               type={TypeholderId}
+              ref={inputRef}
               placeholder={PlaceholderId}
               className="Auth_Email_Account_Creation"
+              id={loginInputId}
               value={inputValue}
               onChange={(e) => setInputValue(e.target.value)}
             />

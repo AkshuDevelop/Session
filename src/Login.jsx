@@ -2,6 +2,37 @@ import React from "react";
 import "./Login.css";
 import Dashboard from "./Dashboard";
 
+/**
+ * Login.jsx
+ *
+ * Authentication UI component that handles sign-in and sign-up flows (email + Google).
+ *
+ * Overview:
+ *  - Renders either the sign-in UI or sign-up flow based on internal state.
+ *  - Supports "Continue with Google" redirect and an email-based flow which advances through stages
+ *    (email -> OTP -> password) for demonstration purposes.
+ *
+ * Internal state (key variables):
+ *  - Status: boolean — false => sign-in mode, true => sign-up mode
+ *  - LoginStage: number — stage of the sign-up flow (0: email, 1: OTP, 2: password, ...)
+ *  - inputValue: string — controlled input value for the current stage
+ *  - emailError: string — validation or UI errors to display to the user
+ *
+ * Important functions:
+ *  - validateEmail(email): boolean — returns truthy if the email matches a common regex pattern
+ *  - handleEmailSignIn(e): submits the sign-in form; validates email and advances LoginStage
+ *  - handleSignUpSubmit(e): handles sign-up form submission depending on current LoginStage
+ *
+ * Accessibility / UX:
+ *  - The input is focused when `LoginStage` changes via a ref and useEffect.
+ *  - Error messages are displayed inline and styled in crimson.
+ *
+ * Notes:
+ *  - This component is currently front-end-only; actual authentication (API calls, token handling)
+ *    should be added where indicated.
+ *  - The Google sign-in button triggers a redirect to Google's login endpoint for demo purposes.
+ */
+
 function Login() {
   const [Status, setStatus] = React.useState(false);
   const [LoginStage, SetLoginStage] = React.useState(0);
